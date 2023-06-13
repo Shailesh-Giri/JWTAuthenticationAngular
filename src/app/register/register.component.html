@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <h1>Register</h1>
+    <hr>
+    {{register.value | json}}
+    <div class="row">
+        <div class="col-md-7">
+            <form [formGroup]="register" (ngSubmit)="onSubmit(register.value)">
+                <div class="form-group mb-3">
+                    <label for="" class="form-label">UserName</label>
+                    <input type="text" formControlName="userName" class="form-control" placeholder="Enter UserName">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="" class="form-label">Email</label>
+                    <input type="text" formControlName="email" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="" class="form-label">PhoneNumber</label>
+                    <input type="text" formControlName="phoneNumber" class="form-control" placeholder="Enter PhoneNumber">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" placeholder="Enter Password">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="" class="form-label">Confirm Password</label>
+                    <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Enter confirmPassword">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="submit" class="btn btn-primary" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

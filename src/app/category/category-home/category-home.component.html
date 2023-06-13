@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h1>Category</h1>
+    <a routerLink="" class="btn btn-success">Create New</a>
+    <hr>
+    <div class="row">
+        <div class="col-md">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Category Name</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let category of categoryList">
+                        <td>{{category.categoryId}}</td>
+                        <td>{{category.categoryName}}</td>
+                        <td>
+                            <a routerLink="details/{{category.categoryId}}" class="btn btn-primary">View</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
